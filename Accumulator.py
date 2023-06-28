@@ -16,20 +16,18 @@ class Accumulator:
     def select(self):
         variable1 = input("Name of column in dataframe for x : ")
         variable2 = input("Name of column in dataframe for y : ")
-        variable3 = input("Name of column in dataframe for z : ")
         print("\n")
 
         x = self.dataframe[variable1].to_numpy();
         y = self.dataframe[variable2].to_numpy();
-        z = self.dataframe[variable3].to_numpy();
 
         #combine selected column as dataframe and column name as object then assign to property result
         column_names = {
             'first_column': variable1,
             'second_column': variable2,
-            'third_column': variable3,
+          
         }
-        new_dataframe = pd.DataFrame({variable1: x, variable2: y, variable3: z})
+        new_dataframe = pd.DataFrame({variable1: x, variable2: y})
         self.result = {
             'column_names': column_names,
             'dataframe': new_dataframe,

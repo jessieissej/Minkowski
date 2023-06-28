@@ -31,8 +31,8 @@ output = clustermaster.get_result()
 
 #Instance of class for Mapping of output
 mapper = Mapper(output)
-mapper.destructure_dataframe()
-mapper.map_3d()
+mapper.map()
+
 
 
 
